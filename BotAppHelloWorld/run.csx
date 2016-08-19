@@ -3,7 +3,7 @@ using Microsoft.Bot.Connector;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info($"Azure Function 2 - C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
+    log.Info($"C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
     Activity activity = await req.Content.ReadAsAsync<Activity>();
     
     if (activity.Type == ActivityTypes.Message)
